@@ -1,15 +1,17 @@
 """ main algorithm: k_means """
+from threading import Thread
 
 def k_means(data, headers, k):
     """ k_means algorithm """
     clusters = init_group(data, headers, k)
-    i = 0
+    # i = 0
     while True:
         find_members(data, headers, clusters, k)
         print_clusters(clusters)
-        print("-------------------------------------")
+        print("---------------------------------------------------------------------")
         diff = calc_mean(clusters)
         # i += 1
+        print(diff)
         if diff == 0:
             break
 
@@ -20,33 +22,56 @@ def init_group(data, headers, k):
     clusters = []
     for i in range(1, k + 1):
         clusters.append({"mean": [], "members": []})
-        for j in range(len(data[i])):
-            if data[i][j] == 1:
-                clusters[i - 1]["mean"].append(headers[j])
+        clusters[i - 1]["mean"] = data[i][:]
 
     return clusters
 
 
 def find_members(data, headers, clusters, k):
     """ find members in each group """
-    for i in range(1, len(data)):
-        child_data = data[i]
-        max_c = 0
-        max_index = 0
-        for j in range(k):
-            mean = clusters[j]["mean"]
-            count = 0
-            index = 0
-            for area in mean:
-                index = headers.index(area)
-                if child_data[index] == 1:
-                    count += 1
+    lst_thread = []
+    for i in range(10):
+        lst_thread.append(Thread())
 
-            if max_c < count:
-                max_c = count
-                max_index = j
+    i_thread = 0
+    len_data = len(data)
+    for i in range(1, len_data):
+        calc_dist(clusters, data[i], k)
+        # if lst_thread[i_thread].isAlive():
+        #     lst_thread[i_thread].join()
+        # lst_thread[i_thread] = Thread(target=calc_dist, args=(clusters, data[i], k))
+        # lst_thread[i_thread].start()
+        # # print("thread " + str(i_thread) + " start")
+        # i_thread += 1
 
-        clusters[max_index]["members"].append(get_name_from_list(child_data, headers))
+        if i_thread == 10:
+            i_thread = 0
+
+    while True:
+        alive = 0
+        for i in range(10):
+            if lst_thread[i].isAlive():
+                alive += 1
+        if alive == 0:
+            break
+
+    return
+
+
+def calc_dist(clusters, child_data, k):
+    max_dist = 0
+    max_index = 0
+    for j in range(k):
+        mean = clusters[j]["mean"]
+        dist = 0
+
+        for m in range(len(mean)):
+            dist += (mean[m] - child_data[m]) ** 2
+
+        if max_dist < dist:
+            max_dist = dist
+            max_index = j
+    clusters[max_index]["members"].append(child_data[:])
     return
 
 
@@ -67,12 +92,21 @@ def calc_mean(clusters):
     for item in clusters:
         old_mean = item["mean"]
         mem = item["members"]
-        new_mean = []
-        for plant in mem:
-            for area in plant:
-                if area not in new_mean:
-                    new_mean.append(area)
-        diff += calc_difference(old_mean, new_mean)
+        new_mean = [0] * len(old_mean)
+
+        row = len(mem)
+        col = len(old_mean)
+
+        for i in range(row):
+            for j in range(col):
+                new_mean[j] += mem[i][j]
+
+        if row == 0:
+            new_mean = old_mean[:]
+        else:
+            for i in range(col):
+                new_mean[i] = new_mean[i] / row
+            diff += calc_difference(old_mean, new_mean)
         del item["mean"][:]
         item["mean"] = new_mean[:]
     return diff
@@ -80,12 +114,10 @@ def calc_mean(clusters):
 
 def calc_difference(lst1, lst2):
     """ calc_difference """
-    count = 0
-    for val in lst1:
-        if val in lst2:
-            count += 1
-
-    return len(lst1) - count + len(lst2) - count
+    dist = 0
+    for i in range(len(lst1)):
+        dist += (lst1[i] - lst2[i]) ** 2
+    return dist
 
 
 def print_clusters(clusters):

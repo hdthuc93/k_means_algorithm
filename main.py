@@ -4,7 +4,7 @@ from algorithm import k_means
 
 def main():
     """ Main function """
-    k = 70
+    k = 10
 
     headers = io_file.read_stateabbr("./data/stateabbr.txt")
     data = io_file.read_data("./data/plants.data", headers)
