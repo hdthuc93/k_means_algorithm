@@ -2,9 +2,10 @@
 
 def k_means(data, headers, k):
     """ k_means algorithm """
-    clusters = init_group(data, headers, k)
+    clusters = init_group(data, k)
     count = 0
     prev_val = -1
+    len_data = len(data) - 1
     while True:
         remove_all_members(clusters)
         find_members(data, headers, clusters, k)
@@ -21,7 +22,11 @@ def k_means(data, headers, k):
             break
 
     out_data = gen_output_data(clusters, headers)
-    return out_data
+    a = calc_a(clusters)
+    percent = ((len_data - a) / len_data) * 100
+    percent = round(percent, 2)
+
+    return (out_data, percent)
 
 
 def remove_all_members(clusters):
@@ -30,7 +35,7 @@ def remove_all_members(clusters):
         del item["members"][:]
 
 
-def init_group(data, headers, k):
+def init_group(data, k):
     """ init list of means """
     clusters = []
     for i in range(1, k + 1):
@@ -147,6 +152,27 @@ def print_clusters(clusters):
     return
 
 
+def calc_a(clusters):
+    a = 0
+    for i in range(len(clusters)):
+        for mem in clusters[i]["members"]:
+            for j in range(len(clusters)):
+                if i == j:
+                    continue
+                found = False
+                for k in range(len(mem)):
+                    if mem[k] == 1 and mem[k] == clusters[j]["mean"][k]:
+                        a += 1
+                        found = True
+                        break
+
+                if found:
+                    break
+
+    print(a)
+    return a
+
+
 def gen_output_data(clusters, headers):
     """ output_data """
     out_data = []
@@ -164,5 +190,6 @@ def gen_output_data(clusters, headers):
 
         dic["area"] = len(temp)
         dic["items"] = temp[:]
+
         out_data.append(dic)
     return out_data

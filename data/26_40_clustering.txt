@@ -1,5 +1,5 @@
 Cluster:	40
-Precision:	N/A
+Precision:	0.18%
 	Cluster 0:
 		Intances: 1622
 		Area: 49

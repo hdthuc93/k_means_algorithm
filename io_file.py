@@ -70,11 +70,11 @@ def write_csv(data, path):
     return
 
 
-def write_txt(data, path):
+def write_txt(data, percent, path):
     """ write_txt """
     f_open = open(path, "w")
     f_open.write("Cluster:\t" + str(len(data)) + "\n")
-    f_open.write("Precision:\tN/A\n")
+    f_open.write("Precision:\t" + str(percent) + "%\n")
 
     for i in range(len(data)):
         f_open.write("\tCluster " + str(i) + ":\n")
