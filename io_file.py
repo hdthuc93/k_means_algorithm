@@ -47,3 +47,38 @@ def read_data(file_name, lst_header):
         lst_out.append(lst_temp)
 
     return lst_out
+
+
+def read_csv(path):
+    """ read_csv """
+    lst_data = read_file(path)
+    data = []
+    data.append(lst_data[0].split(","))
+
+    for i in range(1, len(lst_data)):
+        data.append(list(map(int, lst_data[i].split(","))))
+
+    return data
+
+
+def write_csv(data, path):
+    """ write_csv """
+    f_open = open(path, "w")
+    for item in data:
+        f_open.write(",".join(list(map(str, item))))
+        f_open.write("\n")
+    return
+
+
+def write_txt(data, path):
+    """ write_txt """
+    f_open = open(path, "w")
+    f_open.write("Cluster:\t" + str(len(data)) + "\n")
+    f_open.write("Precision:\tN/A\n")
+
+    for i in range(len(data)):
+        f_open.write("\tCluster " + str(i) + ":\n")
+        f_open.write("\t\tIntances: " + str(data[i]["intances"]) + "\n")
+        f_open.write("\t\tArea: " + str(data[i]["area"]) + "\n")
+        f_open.write("\t\t" + ", ".join(data[i]["items"]) + "\n")
+    return

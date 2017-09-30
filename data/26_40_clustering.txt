@@ -1,0 +1,162 @@
+Cluster:	40
+Precision:	N/A
+	Cluster 0:
+		Intances: 1622
+		Area: 49
+		fl, nc, ga, tn, va, ar, il, in, ky, mo, al, nj, pa, sc, pr, md, wv, ms, tx, dc, de, la, ct, hi, ma, ca, ok, ny, oh, ri, or, az, on, ut, me, bc, nh, vt, mi, nv, nm, ia, ks, ne, wi, mn, sd, nd, wa
+	Cluster 1:
+		Intances: 248
+		Area: 63
+		ar, az, ca, fl, ga, hi, ks, la, md, ms, mo, nv, nm, ok, or, pr, tx, ut, va, vi, al, il, in, ia, ky, ne, nj, nc, oh, pa, sc, tn, wv, co, sd, bc, de, ny, dc, me, ma, wi, on, id, mi, mn, mt, nd, wa, wy, ab, ns, sk, ri, ct, vt, qc, lb, nh, nf, mb, nb, nt
+	Cluster 2:
+		Intances: 1027
+		Area: 65
+		ar, ct, de, dc, fl, ga, il, in, ia, ky, la, me, md, ma, mi, ms, mo, nh, nj, ny, nc, oh, ok, pa, ri, sc, tn, tx, vt, va, wv, wi, al, ks, ne, sd, mn, on, pr, ak, ca, hi, id, nm, or, wa, wy, bc, ns, yt, mt, co, mb, qc, nb, vi, nd, ut, az, sk, ab, nt, nf, nv, nu
+	Cluster 3:
+		Intances: 2379
+		Area: 50
+		hi, pr, vi, ca, fl, tx, md, ct, ga, la, al, az, oh, sc, dc, nc, mi, nm, ma, pa, ms, or, il, me, va, nj, ny, tn, ar, nh, ok, wi, mo, id, sd, nf, ns, ak, bc, co, wa, on, wv, ky, ri, de, nb, ia, ks, qc
+	Cluster 4:
+		Intances: 1138
+		Area: 66
+		ab, ar, az, ca, co, ct, de, dc, fl, ga, hi, id, il, in, ia, ks, ky, la, me, md, ma, mi, mn, ms, mo, mt, ne, nv, nh, nj, nm, ny, nc, nd, oh, ok, or, pa, pr, ri, sc, sd, tn, tx, ut, vt, va, vi, wa, wv, wi, wy, al, bc, mb, nb, ns, on, qc, sk, ak, lb, nf, nt, nu, yt
+	Cluster 5:
+		Intances: 5780
+		Area: 58
+		nc, me, nh, vt, va, wv, nb, nf, ns, on, qc, wy, pr, ar, il, in, ia, ks, ky, mo, oh, pa, tn, ma, mn, ri, ab, bc, mb, nt, sk, yt, or, mt, ak, nd, nv, ut, id, ne, nj, de, al, vi, md, mi, la, ok, wi, co, lb, wa, sc, sd, ct, ms, dc, nu
+	Cluster 6:
+		Intances: 255
+		Area: 61
+		ak, ca, or, wa, bc, ab, me, ma, mi, nh, mb, lb, nf, nt, ns, nu, on, qc, sk, yt, id, ct, ny, ri, va, nb, mt, co, pa, az, hi, tx, fl, ga, la, pr, vi, mn, vt, ne, nd, sd, wy, nv, oh, sc, mo, ut, il, nm, wi, de, dc, in, ia, md, nc, al, ky, nj, ar
+	Cluster 7:
+		Intances: 972
+		Area: 66
+		ar, az, ca, ct, de, dc, fl, ga, il, in, ia, ks, ky, la, me, md, ma, mi, mn, ms, mo, ne, nh, nj, nm, ny, nc, nd, oh, ok, pa, pr, ri, sc, sd, tn, tx, vt, va, vi, wv, wi, al, nb, ns, on, qc, id, mt, or, wa, bc, nf, sk, mb, lb, ak, co, wy, nt, hi, nv, ut, yt, ab, nu
+	Cluster 8:
+		Intances: 584
+		Area: 66
+		ab, ct, in, ia, me, md, ma, mi, mn, nh, ny, oh, pa, ri, vt, va, wv, wi, mb, nb, lb, nf, ns, nu, on, qc, sk, il, ky, nd, ca, fl, hi, id, ks, mo, nj, or, wa, nt, ak, mt, de, al, tn, bc, wy, dc, nc, sd, ga, yt, sc, co, ut, la, ne, pr, ms, ar, az, tx, nm, ok, nv, vi
+	Cluster 9:
+		Intances: 3910
+		Area: 62
+		ca, az, fl, in, ma, nj, ny, oh, pa, on, mi, ut, vt, nm, tx, va, md, ia, mn, nc, wy, la, wa, al, ga, pr, il, me, co, ky, mo, ok, bc, sc, vi, de, mb, qc, ar, id, ak, ct, nd, sd, wi, ne, ms, wv, ns, nf, ks, tn, nb, mt, sk, lb, dc, ab, nt, nh, nu, yt
+	Cluster 10:
+		Intances: 668
+		Area: 66
+		az, ca, co, id, me, ma, nv, nm, or, ut, wy, ab, ak, mt, wa, bc, nt, yt, ne, sd, tx, sk, ia, qc, mn, nd, il, in, ks, mo, ny, oh, wi, mi, mb, lb, nf, nu, on, ct, de, dc, hi, ky, md, nj, pa, vt, ok, wv, la, nh, nc, va, ar, ri, ga, sc, nb, ns, tn, al, fl, ms, pr, vi
+	Cluster 11:
+		Intances: 337
+		Area: 44
+		az, co, id, mt, ne, nv, nm, sd, ut, wy, tx, wa, sk, ca, or, ab, ak, il, ia, mn, ny, wi, bc, mb, nt, on, yt, lb, nu, qc, ky, nd, nf, ks, mo, ok, me, vt, ns, mi, oh, nb, nh, pa
+	Cluster 12:
+		Intances: 591
+		Area: 45
+		ca, nv, or, ny, ab, id, wa, co, sd, ut, mt, wy, az, hi, ma, nm, pa, il, md, mi, ms, va, tx, fl, pr, al, bc, mo, nj, mn, vt, wi, mb, on, qc, sk, ky, ak, yt, ks, me, in, la, sc, tn
+	Cluster 13:
+		Intances: 1015
+		Area: 64
+		ct, dc, fl, hi, il, ky, la, md, mi, ms, nc, pr, sc, va, vi, ar, ga, ma, nj, ny, or, pa, tn, tx, al, on, mo, ok, in, ks, nm, de, nh, oh, wv, az, ca, wa, ia, me, vt, ne, id, bc, ns, co, ut, wi, ri, qc, nv, mn, nb, sd, mt, ak, lb, nf, sk, ab, wy, mb, nt, nd
+	Cluster 14:
+		Intances: 562
+		Area: 64
+		ca, id, mt, or, wa, bc, ab, mi, mn, nd, sd, wy, on, ar, ky, la, mo, ny, tn, tx, ut, al, mb, nv, ma, ak, nt, yt, az, ct, de, fl, il, ks, me, pa, pr, vt, va, wi, co, ia, md, nh, oh, sk, nj, sc, qc, ns, ne, nu, nm, in, nb, ga, nc, wv, lb, nf, hi, ri, dc, ok
+	Cluster 15:
+		Intances: 580
+		Area: 61
+		ny, nj, fl, sc, al, ky, me, nc, oh, wi, on, qc, de, dc, pa, ma, mi, vt, ab, ak, nh, mb, lb, nf, nt, ia, ct, md, ri, va, ar, il, ks, tx, mn, bc, nb, sk, mt, nu, yt, tn, or, wa, ns, mo, nd, in, sd, wv, co, la, pr, vi, id, ga, ut, ok, wy, ne, ms
+	Cluster 16:
+		Intances: 495
+		Area: 65
+		ab, ak, az, ca, co, ct, ga, id, in, ia, me, md, ma, mi, mn, mt, nv, nh, nm, ny, nc, oh, or, pa, ri, tn, ut, vt, va, wa, wv, wi, wy, bc, mb, nb, lb, nf, nt, ns, nu, on, qc, sk, yt, de, dc, il, ne, nj, nd, sd, ks, ky, ok, al, mo, tx, ar, la, hi, fl, sc, ms, pr
+	Cluster 17:
+		Intances: 741
+		Area: 58
+		az, co, nm, tx, hi, ut, ok, mt, wa, wy, sk, ab, ak, id, bc, nf, nu, qc, yt, ne, nv, ca, al, md, ma, ny, la, me, fl, ar, va, wv, mo, ri, ga, ms, pr, vi, sc, pa, ks, mb, nt, on, nc, or, tn, nj, nb, nh, vt, lb, sd, nd, wi, ns, il, ia
+	Cluster 18:
+		Intances: 412
+		Area: 66
+		ct, de, dc, il, ky, me, md, ma, mi, nj, ny, nc, pa, ri, bc, nb, ns, on, id, mo, mt, oh, vt, va, wa, wv, wi, wy, qc, fl, la, ms, nh, sc, tx, al, ca, or, ar, ne, nd, ga, hi, pr, tn, ut, mn, ia, ks, ab, vi, in, nm, ak, nf, lb, nv, mb, sd, co, ok, az, nt, sk, yt, nu
+	Cluster 19:
+		Intances: 491
+		Area: 56
+		ca, or, wa, id, ut, wy, mt, pa, ct, de, dc, ky, me, md, ma, mi, mo, ny, oh, tx, vt, on, ar, ga, ia, tn, va, wv, al, il, nc, nj, hi, sc, fl, la, ms, nm, ri, sd, wi, az, in, ks, co, pr, vi, qc, nh, ab, nd, ok, ne, mn, ns, sk
+	Cluster 20:
+		Intances: 764
+		Area: 58
+		ca, or, hi, fl, nc, pa, tx, al, id, ut, wy, md, nj, ny, sd, on, qc, nm, co, ma, ab, ga, il, mi, vt, wi, bc, az, ok, sc, la, ms, mt, de, dc, in, oh, ct, va, pr, tn, mb, nf, ia, ks, mn, mo, ne, me, nt, sk, nd, nb, nh, wv, ak, lb, ns
+	Cluster 21:
+		Intances: 1796
+		Area: 38
+		fl, pr, vi, ar, ga, hi, al, az, tx, la, ca, ms, nm, nj, or, sc, va, on, ky, md, oh, wv, pa, ma, mi, mo, dc, tn, ct, nc, il, ks, ok, ut, nv, mt, wi, ny
+	Cluster 22:
+		Intances: 357
+		Area: 66
+		az, ca, co, id, ks, mt, ne, nv, nm, nd, ok, or, sd, tx, ut, wa, wy, bc, mn, mo, wi, ab, ak, ar, mb, sk, yt, il, in, ia, ky, mi, oh, on, la, md, ny, pa, tn, va, wv, al, nt, qc, de, ma, nh, lb, ns, vt, nb, ct, hi, me, ms, nc, sc, nf, nu, dc, nj, fl, ga, ri, pr, vi
+	Cluster 23:
+		Intances: 2104
+		Area: 57
+		tx, ar, ok, nm, fl, ks, la, mo, il, id, ky, mt, tn, wa, al, mb, on, pr, ms, az, pa, nc, in, ia, oh, md, va, wv, mn, wi, nj, ri, ma, ab, bc, sk, sc, nd, sd, vt, mi, ga, co, ut, vi, nt, qc, me, ne, nb, nf, or, lb, de, ct, wy, dc
+	Cluster 24:
+		Intances: 290
+		Area: 57
+		co, mt, wy, id, ab, ak, bc, lb, nt, nu, qc, yt, mn, sd, mb, on, sk, ut, nf, nb, ns, ne, nd, il, ia, mi, wi, ks, nm, ok, ct, de, nj, vt, or, me, nh, ny, ca, nv, in, ky, md, oh, wa, ma, az, pa, ri, hi, mo, va, la, nc, pr, sc, al
+	Cluster 25:
+		Intances: 632
+		Area: 46
+		az, nm, tx, ar, fl, ks, la, mo, ok, md, va, ut, ca, il, ma, ms, nc, tn, nv, ga, pr, vi, al, me, ia, ny, ri, sc, wi, in, mi, mn, hi, pa, nj, ct, on, qc, de, nd, bc, or, ab, id, sk, vt
+	Cluster 26:
+		Intances: 246
+		Area: 41
+		co, ut, nm, wy, ks, ne, az, nv, ca, hi, mt, wa, bc, mb, tx, ct, ma, mi, nh, ny, oh, vt, va, on, id, ok, sd, or, fl, ky, ab, ak, ri, lb, nt, nu, qc, yt, md, sk, il
+	Cluster 27:
+		Intances: 145
+		Area: 7
+		nm, ut, ab, qc, il, mo, nc
+	Cluster 28:
+		Intances: 405
+		Area: 58
+		az, co, ks, mt, ne, nm, nd, ok, sd, tx, ut, wa, wy, ar, ia, mo, ca, pr, tn, la, ms, mn, mb, nv, or, fl, id, il, in, ky, vi, hi, md, ny, sc, wi, mi, ri, ct, ma, nj, sk, on, me, al, ga, nc, va, ab, oh, de, bc, pa, dc, wv, nt, nh, vt
+	Cluster 29:
+		Intances: 301
+		Area: 40
+		az, co, id, me, ma, nv, nm, or, ut, wy, mt, ab, sd, bc, mb, nt, sk, yt, tx, ca, nd, ks, ok, md, ne, mo, sc, ct, il, in, mi, ny, oh, wi, on, pa, ns, ak, ar, la
+	Cluster 30:
+		Intances: 216
+		Area: 64
+		co, ct, id, il, in, ia, ks, ky, me, ma, mi, mn, mo, mt, ne, nj, ny, nd, oh, ri, sd, wa, wi, wy, ar, ok, tx, mb, la, ms, nc, tn, al, on, nm, vt, qc, ab, de, nh, pa, bc, nb, nt, sk, ca, dc, va, md, az, nv, or, ut, ga, sc, wv, fl, hi, nf, yt, ak, ns, pr, lb
+	Cluster 31:
+		Intances: 304
+		Area: 57
+		ca, or, wa, bc, nv, hi, md, pa, ns, il, ma, az, nm, tx, wi, nc, va, me, nh, ny, tn, vt, nb, nf, qc, on, oh, la, ms, nj, sc, al, ab, ut, nt, ct, mi, co, de, in, ky, yt, ri, ok, ar, mb, ia, mo, dc, fl, ga, sd, sk, wv, pr, vi, ks
+	Cluster 32:
+		Intances: 550
+		Area: 62
+		ab, ak, ca, id, mt, nv, or, wa, wy, bc, az, co, ut, sd, mb, sk, yt, me, md, mi, pa, vt, wv, nf, qc, nm, nt, nd, on, nh, ny, nc, sc, tn, va, nb, lb, nu, ks, ne, tx, ct, il, ma, ms, mo, oh, ok, wi, ns, mn, dc, in, ia, nj, de, ga, hi, ky, la, al, ri
+	Cluster 33:
+		Intances: 441
+		Area: 54
+		az, ca, co, nv, nm, tx, ut, fl, hi, la, pr, vi, id, wa, or, ok, ga, nc, ks, ma, mi, mn, ms, mo, ne, ny, pa, wi, il, vt, ar, oh, al, md, sc, mt, va, in, nj, bc, ak, me, nb, ns, qc, on, wy, dc, tn, sd, ri, wv, de, ct
+	Cluster 34:
+		Intances: 634
+		Area: 28
+		ca, nv, az, ut, id, co, bc, sk, wa, ma, nh, wy, mb, lb, nf, nu, on, qc, ab, pr, pa, hi, ga, ak, wi, fl, tx, vi
+	Cluster 35:
+		Intances: 200
+		Area: 9
+		az, ut, nv, nm, id, or, ca, wy, ma
+	Cluster 36:
+		Intances: 71
+		Area: 27
+		az, ca, co, nv, nm, ut, or, id, ct, ma, mi, nj, ny, oh, ok, pa, ri, wv, on, mo, de, fl, ga, il, ks, md, tn
+	Cluster 37:
+		Intances: 322
+		Area: 25
+		az, ca, nv, ut, id, or, wa, wy, hi, de, il, in, ia, ma, mi, mo, nj, ny, oh, pa, vt, wi, on, md, mt
+	Cluster 38:
+		Intances: 540
+		Area: 15
+		az, pr, nv, mo, pa, on, qc, id, fl, ma, sc, nc, md, ga, la
+	Cluster 39:
+		Intances: 656
+		Area: 59
+		fl, ga, la, ms, pr, sc, al, ar, dc, nc, ok, tn, tx, mo, nj, va, ca, pa, ks, md, az, hi, nm, vi, or, sd, nv, ut, il, in, ia, mn, ne, wi, de, wv, ny, co, oh, mi, wa, ky, ct, bc, nd, mt, wy, ma, me, on, nh, ri, ns, ak, id, nf, qc, vt, nb

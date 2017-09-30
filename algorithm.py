@@ -1,75 +1,86 @@
 """ main algorithm: k_means """
-from threading import Thread
 
 def k_means(data, headers, k):
     """ k_means algorithm """
     clusters = init_group(data, headers, k)
-    # i = 0
+    count = 0
+    prev_val = -1
     while True:
+        remove_all_members(clusters)
         find_members(data, headers, clusters, k)
-        print_clusters(clusters)
-        print("---------------------------------------------------------------------")
+
         diff = calc_mean(clusters)
-        # i += 1
-        print(diff)
-        if diff == 0:
+
+        if int(diff) == prev_val:
+            count += 1
+        else:
+            count = 0
+            prev_val = int(diff)
+
+        if count == 10:
             break
 
-    return
+    out_data = gen_output_data(clusters, headers)
+    return out_data
+
+
+def remove_all_members(clusters):
+    """ remove_all_members """
+    for item in clusters:
+        del item["members"][:]
+
 
 def init_group(data, headers, k):
     """ init list of means """
     clusters = []
     for i in range(1, k + 1):
         clusters.append({"mean": [], "members": []})
-        clusters[i - 1]["mean"] = data[i][:]
+        index = len(clusters)
+        while True:
+            if is_difference(clusters, data[index]):
+                clusters[i - 1]["mean"] = data[index][:]
+                break
+            index += 1
 
     return clusters
 
 
+def is_difference(clusters, data):
+    """ is_difference """
+    for item in clusters:
+        count = 0
+        length = len(item["mean"])
+
+        for i in range(length):
+            if item["mean"][i] == data[i]:
+                count += 1
+        if length != 0 and count == length:
+            return False
+    return True
+
+
 def find_members(data, headers, clusters, k):
     """ find members in each group """
-    lst_thread = []
-    for i in range(10):
-        lst_thread.append(Thread())
-
-    i_thread = 0
     len_data = len(data)
     for i in range(1, len_data):
         calc_dist(clusters, data[i], k)
-        # if lst_thread[i_thread].isAlive():
-        #     lst_thread[i_thread].join()
-        # lst_thread[i_thread] = Thread(target=calc_dist, args=(clusters, data[i], k))
-        # lst_thread[i_thread].start()
-        # # print("thread " + str(i_thread) + " start")
-        # i_thread += 1
-
-        if i_thread == 10:
-            i_thread = 0
-
-    while True:
-        alive = 0
-        for i in range(10):
-            if lst_thread[i].isAlive():
-                alive += 1
-        if alive == 0:
-            break
 
     return
 
 
 def calc_dist(clusters, child_data, k):
-    max_dist = 0
+    max_count = 0
     max_index = 0
     for j in range(k):
         mean = clusters[j]["mean"]
-        dist = 0
+        count = 0
 
-        for m in range(len(mean)):
-            dist += (mean[m] - child_data[m]) ** 2
+        for i in range(len(mean)):
+            if mean[i] == child_data[i]:
+                count += 1
 
-        if max_dist < dist:
-            max_dist = dist
+        if max_count < count:
+            max_count = count
             max_index = j
     clusters[max_index]["members"].append(child_data[:])
     return
@@ -108,6 +119,13 @@ def calc_mean(clusters):
                 new_mean[i] = new_mean[i] / row
             diff += calc_difference(old_mean, new_mean)
         del item["mean"][:]
+
+        for i in range(len(new_mean)):
+            if new_mean[i] < 0.5:
+                new_mean[i] = 0
+            else:
+                new_mean[i] = 1
+
         item["mean"] = new_mean[:]
     return diff
 
@@ -122,7 +140,29 @@ def calc_difference(lst1, lst2):
 
 def print_clusters(clusters):
     """ print_clusters """
+    sum_s = 0
     for i in range(len(clusters)):
-        print(clusters[i]["mean"])
-
+        sum_s += len(clusters[i]["members"])
+    print(sum_s)
     return
+
+
+def gen_output_data(clusters, headers):
+    """ output_data """
+    out_data = []
+
+    for items in clusters:
+        dic = {"intances": len(items["members"]), "area": 0, "items": []}
+        temp = []
+        row = len(items["members"])
+        col = len(headers)
+
+        for i in range(row):
+            for j in range(col):
+                if items["members"][i][j] == 1 and headers[j] not in temp:
+                    temp.append(headers[j])
+
+        dic["area"] = len(temp)
+        dic["items"] = temp[:]
+        out_data.append(dic)
+    return out_data
